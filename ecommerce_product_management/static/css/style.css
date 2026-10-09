@@ -1,0 +1,110 @@
+body {
+    background: #f6f8fb;
+    min-height: 100vh;
+}
+
+.navbar-brand {
+    letter-spacing: 0.3px;
+}
+
+.stat-card {
+    border-radius: 14px;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+.login-wrapper {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    border-radius: 16px;
+}
+
+.form-control,
+.form-select {
+    min-height: 44px;
+}
+
+textarea.form-control {
+    min-height: 120px;
+}
+
+.product-thumb {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.placeholder-thumb {
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #6c757d;
+    text-align: center;
+}
+
+.preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detail-image {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.detail-placeholder {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    margin: auto;
+    border-radius: 14px;
+    background: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box {
+    background: #f8f9fa;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.table > :not(caption) > * > * {
+    padding: 14px 12px;
+}
+
+@media (max-width: 767px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        border-radius: 6px !important;
+        margin-bottom: 3px;
+    }
+
+    .detail-image,
+    .detail-placeholder {
+        height: 240px;
+    }
+}
