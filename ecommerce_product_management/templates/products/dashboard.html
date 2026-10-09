@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Dashboard | ShopAdmin{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+    <div>
+        <h1 class="h3 fw-bold mb-1">Dashboard</h1>
+        <p class="text-muted mb-0">Quick overview of your store.</p>
+    </div>
+    <a href="{% url 'product_add' %}" class="btn btn-primary">+ Add Product</a>
+</div>
+
+<div class="row g-4">
+    <div class="col-sm-6 col-xl-3">
+        <div class="card stat-card shadow-sm border-0">
+            <div class="card-body">
+                <p class="text-muted mb-2">Total Products</p>
+                <h2 class="fw-bold mb-0">{{ total_products }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card stat-card shadow-sm border-0">
+            <div class="card-body">
+                <p class="text-muted mb-2">Active Products</p>
+                <h2 class="fw-bold text-success mb-0">{{ active_products }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card stat-card shadow-sm border-0">
+            <div class="card-body">
+                <p class="text-muted mb-2">Inactive Products</p>
+                <h2 class="fw-bold text-secondary mb-0">{{ inactive_products }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+        <div class="card stat-card shadow-sm border-0">
+            <div class="card-body">
+                <p class="text-muted mb-2">Low Stock</p>
+                <h2 class="fw-bold text-danger mb-0">{{ low_stock_products }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mt-4">
+    <div class="card-body">
+        <h5 class="fw-bold">Quick Actions</h5>
+        <div class="d-flex flex-wrap gap-2">
+            <a href="{% url 'product_list' %}" class="btn btn-outline-primary">View Products</a>
+            <a href="{% url 'product_add' %}" class="btn btn-primary">Add Product</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
